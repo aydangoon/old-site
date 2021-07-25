@@ -1,14 +1,16 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from 'react-router-dom'
-import { Experience } from './components/experience'
 import { Home } from './components/home'
+import { Projects } from './components/projects'
 import { Navbar } from './components/navbar'
 import { Footer } from './components/footer'
+import { FunStuff } from './components/fun_stuff'
 
 const App = () => {
   return (
@@ -17,7 +19,8 @@ const App = () => {
       <div className="content">
         <div className="core">
           <Switch>
-            <Route path="/experience" component={Experience} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/fun_stuff" component={FunStuff} />
             <Route path="/" component={Home} />
             <Route path="*">
               <Redirect to="/" />
