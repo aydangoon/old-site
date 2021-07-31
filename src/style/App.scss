@@ -1,0 +1,128 @@
+@use 'sass:map';
+@import 'bootstrap_custom.scss';
+@import 'colors.scss';
+
+.light-theme {
+  color: map.get($greys, 'dark');
+  background-color: map.get($whites, 'med');
+}
+
+.dark-theme {
+  color: map.get($whites, 'light');
+  background-color: map.get($greys, 'med');
+}
+
+.my_navbar {
+  padding: $spacer;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: map.get($greys, 'dark');
+}
+
+.navlink {
+  margin-left: $spacer;
+  margin-right: $spacer;
+  height: 100%;
+  color: map.get($whites, 'light');
+  font-weight: bold;
+  &:hover {
+    color: $dark-lavender !important;
+  }
+}
+
+.active-navlink {
+  color: $lavender;
+  border-bottom: 2px solid $lavender;
+  animation-name: underline;
+  animation-duration: 1s;
+}
+
+@keyframes underline {
+  from {
+    border-bottom-width: 0%;
+  }
+  to {
+    border-bottom-width: 100%;
+  }
+}
+
+.content {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .core {
+  flex: 2;
+}
+
+.footer {
+  background-color: $lavender;
+  min-height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & * {
+    margin-left: 0.25 * $spacer;
+    margin-right: 0.25 * $spacer;
+  }
+}
+
+.tag {
+  padding: 4px 8px 4px 8px;
+  margin: 4px 8px 4px 0px;
+  border-radius: 5px;
+  background-color: #d7d0ff;
+  color: #333435;
+}
+
+.experience-item {
+  margin-bottom: $spacer;
+  margin-top: $spacer;
+  padding-left: 2 * $spacer;
+  padding-right: 2 * $spacer;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  border-radius: 4px;
+}
+
+.dark-theme {
+  .experience-item {
+    background-color: map.get($greys, 'light');
+  }
+}
+
+.project-item {
+  margin: $spacer;
+  padding-left: 2 * $spacer;
+  padding-right: 2 * $spacer;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+  max-width: 500px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  border-radius: 4px;
+}
+
+.dark-theme {
+  .project-item {
+    background-color: map.get($greys, 'light');
+  }
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: $dark-lavender !important;
+}
+
+.react-toggle-thumb {
+  background-color: $lavender !important;
+}

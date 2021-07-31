@@ -1,0 +1,21 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'colors.scss';
+
+// custom stuff here
+@each $breakpoint in map-keys($map: $container-max-widths) {
+  .container-#{$breakpoint} {
+    max-width: map.get($container-max-widths, #{$breakpoint}) !important;
+    padding-left: 2 * $spacer !important;
+    padding-right: 2 * $spacer !important;
+    padding-top: $spacer !important;
+    padding-bottom: $spacer !important;
+    margin-top: $spacer !important;
+    margin-bottom: $spacer !important;
+  }
+}
+
+.col {
+  padding: $spacer;
+}
+
+@import '~bootstrap/scss/bootstrap';

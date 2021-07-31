@@ -6,8 +6,8 @@ export const ExperienceItem = ({
   content,
 }) => {
   return (
-    <div>
-      <div>
+    <div className="experience-item">
+      <div className="header">
         <h4>
           {position} {organization && `@ ${organization}`}
         </h4>
@@ -15,7 +15,7 @@ export const ExperienceItem = ({
           {startDate} - {endDate ? endDate : `present`}
         </small>
       </div>
-      {content}
+      <p>{content}</p>
     </div>
   )
 }
