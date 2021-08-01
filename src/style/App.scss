@@ -83,11 +83,11 @@
 }
 
 .experience-item {
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-name: fade-in;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
+  // opacity: 0;
+  // animation-fill-mode: forwards;
+  // animation-name: fade-in;
+  // animation-duration: 1.5s;
+  // animation-timing-function: ease-out;
   margin-bottom: $spacer;
   margin-top: $spacer;
   padding: 2 * $spacer;
@@ -109,11 +109,11 @@
 }
 
 .project-item {
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-name: fade-in;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
+  // opacity: 0;
+  // animation-fill-mode: forwards;
+  // animation-name: fade-in;
+  // animation-duration: 1.5s;
+  // animation-timing-function: ease-out;
   margin: $spacer;
   padding: 2 * $spacer;
   max-width: 500px;
@@ -144,9 +144,9 @@
 }
 
 #banner {
-  animation-name: slide-in, fade-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  // animation-name: slide-in, fade-in;
+  // animation-duration: 1s;
+  // animation-timing-function: ease-out;
 }
 
 @keyframes slide-in {
