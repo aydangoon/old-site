@@ -4,9 +4,10 @@ export const ExperienceItem = ({
   startDate,
   endDate,
   content,
+  index,
 }) => {
   return (
-    <div className="experience-item">
+    <div className={`experience-item delay-animation-${index}`}>
       <div className="header">
         <h4>
           {position} {organization && `@ ${organization}`}
@@ -15,7 +16,7 @@ export const ExperienceItem = ({
           {startDate} - {endDate ? endDate : `present`}
         </small>
       </div>
-      <p>{content}</p>
+      <div>{content}</div>
     </div>
   )
 }

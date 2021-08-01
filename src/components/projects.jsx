@@ -4,16 +4,17 @@ import { ProjectItem } from './project_item'
 
 export const Projects = () => {
   return (
-    <Container>
+    <Container fluid="xl">
       <Row>
         <Col>
           <h1>Projects</h1>
           <div>
-            I really love coding. <br />
+            I love coding.
+            <br />
             For me it's more than just an academic pursuit, and in my freetime I
-            enjoy working on little projects <br /> and expanding my
-            understanding of the wide world of computer science. Here's some of
-            what I've worked on:
+            enjoy working on little projects and expanding my understanding of
+            the wide world of computer science. Here's some of what I've worked
+            on:
           </div>
         </Col>
       </Row>
@@ -27,8 +28,8 @@ export const Projects = () => {
               justifyContent: 'center',
             }}
           >
-            {PROJECTS.map((item) => (
-              <ProjectItem {...item} key={item.title} />
+            {PROJECTS.map((item, i) => (
+              <ProjectItem {...item} key={item.title} index={i} />
             ))}
           </div>
         </Col>

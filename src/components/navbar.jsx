@@ -2,37 +2,30 @@ import { NavLink } from 'react-router-dom'
 import Toggle from 'react-toggle'
 import 'react-toggle/style.css'
 
-export const Navbar = ({ toggleTheme }) => {
+export const Navbar = ({ defaultChecked, toggleTheme }) => {
+  const links = [
+    { to: '/', text: 'Home' },
+    { to: '/projects', text: 'Projects' },
+    { to: '/fun_stuff', text: 'Fun Stuff' },
+  ]
   return (
     <div className="my_navbar">
-      <NavLink
-        exact
-        className="navlink"
-        activeClassName="active-navlink"
-        to="/"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        exact
-        className="navlink"
-        activeClassName="active-navlink"
-        to="/projects"
-      >
-        Projects
-      </NavLink>
-      <NavLink
-        exact
-        className="navlink"
-        activeClassName="active-navlink"
-        to="/fun_stuff"
-      >
-        Fun Stuff
-      </NavLink>
+      {links.map(({ to, text }) => (
+        <NavLink
+          exact
+          className="navlink"
+          activeClassName="active-navlink"
+          to={to}
+          key={to}
+        >
+          {text}
+          <div className="animated-border" />
+        </NavLink>
+      ))}
       <Toggle
         tabIndex={-1}
         className="toggler ms-auto"
-        defaultChecked={true}
+        defaultChecked={defaultChecked}
         icons={{
           checked: (
             <svg

@@ -4,11 +4,11 @@
 
 .light-theme {
   color: map.get($greys, 'dark');
-  background-color: map.get($whites, 'med');
+  background-color: map.get($whites, 'light');
 }
 
 .dark-theme {
-  color: map.get($whites, 'light');
+  color: map.get($whites, 'med');
   background-color: map.get($greys, 'med');
 }
 
@@ -16,6 +16,9 @@
   padding: $spacer;
   min-height: 10vh;
   display: flex;
+  position: sticky;
+  z-index: 2;
+  top: 0;
   align-items: center;
   background-color: map.get($greys, 'dark');
 }
@@ -24,7 +27,7 @@
   margin-left: $spacer;
   margin-right: $spacer;
   height: 100%;
-  color: map.get($whites, 'light');
+  color: map.get($whites, 'med');
   font-weight: bold;
   &:hover {
     color: $dark-lavender !important;
@@ -33,17 +36,19 @@
 
 .active-navlink {
   color: $lavender;
-  border-bottom: 2px solid $lavender;
-  animation-name: underline;
-  animation-duration: 1s;
+  .animated-border {
+    height: 2px;
+    background-color: $lavender;
+    animation: grow 0.5s ease-out;
+  }
 }
 
-@keyframes underline {
+@keyframes grow {
   from {
-    border-bottom-width: 0%;
+    width: 0%;
   }
   to {
-    border-bottom-width: 100%;
+    width: 100%;
   }
 }
 
@@ -78,18 +83,23 @@
 }
 
 .experience-item {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
   margin-bottom: $spacer;
   margin-top: $spacer;
-  padding-left: 2 * $spacer;
-  padding-right: 2 * $spacer;
-  padding-top: $spacer;
-  padding-bottom: $spacer;
+  padding: 2 * $spacer;
+  background-color: map.get($whites, 'med-light');
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: $spacer;
+    border-bottom: 2px solid $dark-lavender;
   }
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .dark-theme {
@@ -99,18 +109,24 @@
 }
 
 .project-item {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
   margin: $spacer;
-  padding-left: 2 * $spacer;
-  padding-right: 2 * $spacer;
-  padding-top: $spacer;
-  padding-bottom: $spacer;
+  padding: 2 * $spacer;
   max-width: 500px;
+  background-color: map.get($whites, 'med-light');
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: $spacer;
+    border-bottom: 2px solid $dark-lavender;
+    padding: 0.5 * $spacer;
   }
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .dark-theme {
@@ -125,4 +141,34 @@
 
 .react-toggle-thumb {
   background-color: $lavender !important;
+}
+
+#banner {
+  animation-name: slide-in, fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@for $i from 1 through 8 {
+  .delay-animation-#{$i} {
+    animation-delay: #{0.25 * $i}s;
+  }
 }

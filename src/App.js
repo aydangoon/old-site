@@ -10,13 +10,25 @@ import { Projects } from './components/projects'
 import { Navbar } from './components/navbar'
 import { Footer } from './components/footer'
 import { FunStuff } from './components/fun_stuff'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(true)
+  const [darkTheme, setDarkTheme] = useState(
+    window.localStorage.getItem('prefTheme') !== null
+      ? window.localStorage.getItem('prefTheme') === 'true'
+      : true,
+  )
+
+  useEffect(() => {
+    window.localStorage.setItem('prefTheme', darkTheme)
+  }, [darkTheme])
+
   return (
     <Router>
-      <Navbar toggleTheme={() => setDarkTheme(!darkTheme)} />
+      <Navbar
+        defaultChecked={darkTheme}
+        toggleTheme={() => setDarkTheme(!darkTheme)}
+      />
       <div className={`content ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
         <div className="core">
           <Switch>

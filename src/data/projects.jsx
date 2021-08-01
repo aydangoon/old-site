@@ -1,12 +1,12 @@
 export const PROJECTS = [
   {
-    title: 'Brick Bench',
+    title: 'Brick Bench Site',
     startDate: '03/2021',
     tags: ['React', 'Frontend'],
     content: (
       <div>
         <img
-          className="img-fluid rounded"
+          className="img-fluid rounded my-2"
           src="/images/brick-bench.png"
           alt="3d boids"
         />
@@ -18,13 +18,31 @@ export const PROJECTS = [
     ),
   },
   {
+    title: '3D Boids',
+    startDate: '11/2018',
+    tags: ['Simulations', 'C#/Unity'],
+    content: (
+      <div>
+        <img
+          className="img-fluid rounded my-2"
+          src="/images/3dboids.gif"
+          alt="3d boids"
+        />
+        A simulation of 3D flock behavior modeled in Unity. To improve from the
+        2D version I added better collision detection and avoidance so the boids
+        can navigate an environment filled with obstacles. See the code{' '}
+        <a href="https://github.com/aydangoon/3D-Boids">here</a>.
+      </div>
+    ),
+  },
+  {
     title: 'LitheGL',
     startDate: '09/2019',
     tags: ['Graph Theory', 'React', 'Frontend'],
     content: (
       <div>
         <img
-          className="img-fluid rounded"
+          className="img-fluid rounded my-2"
           src="/images/lithegl.png"
           alt="3d boids"
         />
@@ -48,7 +66,7 @@ export const PROJECTS = [
     content: (
       <div>
         <img
-          className="img-fluid rounded"
+          className="img-fluid rounded my-2"
           src="/images/2dboids.png"
           alt="3d boids"
         />
@@ -67,7 +85,7 @@ export const PROJECTS = [
     content: (
       <div>
         <img
-          className="img-fluid rounded"
+          className="img-fluid rounded my-2"
           src="/images/batesian.png"
           alt="3d boids"
         />
@@ -82,34 +100,18 @@ export const PROJECTS = [
   },
 
   {
-    title: '3D Boids',
-    startDate: '11/2018',
-    tags: ['Simulations', 'C#/Unity'],
-    content: (
-      <div>
-        <img
-          className="img-fluid rounded"
-          src="/images/3dboids.gif"
-          alt="3d boids"
-        />
-        A simulation of 3D flock behavior modeled in Unity. To improve from the
-        2D version I added better collision detection and avoidance so the boids
-        can navigate an environment filled with obstacles. See the code{' '}
-        <a href="https://github.com/aydangoon/3D-Boids">here</a>.
-      </div>
-    ),
-  },
-  {
     title: 'One Night Werewolf Online',
     startDate: '11/2018',
     tags: ['Frontend', 'Backend', 'Socket.io', 'Expressjs'],
     content: (
       <div>
-        <img
-          className="w-50 rounded"
-          src="/images/werewolf.png"
-          alt="3d boids"
-        />
+        <div className="text-center">
+          <img
+            className="w-75 rounded my-2 mx-auto"
+            src="/images/werewolf.png"
+            alt="3d boids"
+          />
+        </div>
         <br />
         One Night Werewolf Online is a real-time multiplayer card game. You can
         create private lobbies and play with up to 10 other players. I've

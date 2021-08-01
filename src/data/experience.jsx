@@ -1,5 +1,5 @@
 export const EXPERIENCE = [
-  {
+  /*{
     position: 'TA for Nets 212: Scalable and Cloud Computing',
     startDate: '09/2021',
     content: (
@@ -12,7 +12,7 @@ export const EXPERIENCE = [
         forward to fall semester!
       </div>
     ),
-  },
+  },*/
   {
     organization: 'Amazon',
     position: 'SDE Intern',

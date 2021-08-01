@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { EXPERIENCE } from '../data/experience'
 import { ExperienceItem } from './experience_item'
@@ -9,6 +10,7 @@ export const Home = () => {
         <Col>
           <div
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}
+            id="banner"
           >
             <Image
               src="/images/pumpkin.jpg"
@@ -16,12 +18,15 @@ export const Home = () => {
               style={{
                 width: '150px',
                 marginRight: '20px',
-                clipPath: 'circle(45%)',
+                borderRadius: '50%',
               }}
             />
             <div>
               <h1>Aydan Gooneratne</h1>
-              <div>Junior @ UPenn studying CIS</div>
+              <h5>Junior at UPenn studying CIS</h5>
+              <small>
+                <i>aydang@seas.upenn.edu</i>
+              </small>
             </div>
           </div>
         </Col>
@@ -29,7 +34,11 @@ export const Home = () => {
       <Row>
         <Col>
           {EXPERIENCE.map((item, i) => (
-            <ExperienceItem key={item.organization + i.toString()} {...item} />
+            <ExperienceItem
+              index={i + 1}
+              key={item.organization + i.toString()}
+              {...item}
+            />
           ))}
         </Col>
       </Row>
