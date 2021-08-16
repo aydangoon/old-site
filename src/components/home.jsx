@@ -12,7 +12,7 @@ export const Home = () => {
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}
             id="banner"
           >
-            <Image
+            {/*<Image
               src="/images/pumpkin.jpg"
               alt="my face here"
               style={{
@@ -20,7 +20,7 @@ export const Home = () => {
                 marginRight: '20px',
                 borderRadius: '50%',
               }}
-            />
+            />*/}
             <div>
               <h1>Aydan Gooneratne</h1>
               <h5>Junior at UPenn studying CIS</h5>
