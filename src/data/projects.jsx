@@ -29,7 +29,7 @@ export const PROJECTS = [
           alt="3d boids"
         />
         A simulation of 3D flock behavior modeled in Unity. To improve on the 2D
-        version, I improved collision detection and avoidance so the boids can
+        version, I enhanced collision detection and avoidance so the boids can
         navigate an environment filled with obstacles. See the code{' '}
         <a href="https://github.com/aydangoon/3D-Boids">here</a>.
       </div>

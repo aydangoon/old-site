@@ -23,9 +23,8 @@ export const EXPERIENCE = [
         As a software development intern at Amazon, I worked for 12 weeks on the{' '}
         <a href="https://one.amazon.com/">Amazon One</a> team. Development was
         fast-paced and I gained valuable experience writing scalable,
-        customer-facing code. As part of my work, I had to familiarize myself
-        with writing design docs, hosting design discussions, and authoring code
-        reviews.
+        customer-facing code. As part of my work, I had learned to write design
+        docs, host design discussions, and author code reviews.
       </div>
     ),
   },
