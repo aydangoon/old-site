@@ -4,7 +4,7 @@ export const ExperienceItem = ({
   startDate,
   endDate,
   content,
-  index,
+  index
 }) => {
   return (
     <div className={`experience-item delay-animation-${index}`}>

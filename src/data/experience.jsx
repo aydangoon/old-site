@@ -22,10 +22,10 @@ export const EXPERIENCE = [
       <div>
         As a software development intern at Amazon, I worked for 12 weeks on the{' '}
         <a href="https://one.amazon.com/">Amazon One</a> team. Development was
-        fast-paced, and I gained valuable experience writing scalable,
-        customer-facing code. I also got practice with writing design docs,
-        hosting design reviews, and working with teammates to review and improve
-        code.
+        fast-paced and I gained valuable experience writing scalable,
+        customer-facing code. As part of my work, I had to familiarize myself
+        with writing design docs, hosting design discussions, and authoring code
+        reviews.
       </div>
     ),
   },
@@ -51,9 +51,10 @@ export const EXPERIENCE = [
     content: (
       <div>
         <a href="https://www.thebraghouse.com/">Braghouse</a> is a startup
-        working on a social networking platform for eSports. Working with them
-        was my introduction to frontend development, and I got valuable
-        beginning experience working with a team.
+        working on a social networking platform for eSports. This internship was
+        my introduction to frontend development. I gained valuable experience
+        collaborating with a team and working with popular frontend frameworks
+        like Next.js.
       </div>
     ),
   },
