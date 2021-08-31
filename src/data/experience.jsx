@@ -16,14 +16,14 @@ export const EXPERIENCE = [
   {
     organization: 'Amazon',
     position: 'SDE Intern',
-    startDate: '06/2021',
+    startDate: '05/2021',
     endDate: '08/2021',
     content: (
       <div>
         As a software development intern at Amazon, I worked for 12 weeks on the{' '}
         <a href="https://one.amazon.com/">Amazon One</a> team. Development was
         fast-paced and I gained valuable experience writing scalable,
-        customer-facing code. As part of my work, I had learned to write design
+        customer-facing code. As part of my work, I learned to write design
         docs, host design discussions, and author code reviews.
       </div>
     ),
@@ -31,7 +31,7 @@ export const EXPERIENCE = [
   {
     organization: 'PennLabs',
     position: 'Frontend Dev',
-    startDate: '01/2021',
+    startDate: '02/2021',
     content: (
       <div>
         <a href="https://pennlabs.org/">PennLabs</a> is a student run
@@ -45,8 +45,8 @@ export const EXPERIENCE = [
   {
     organization: 'Braghouse',
     position: 'Frontend Dev',
-    startDate: '08/2020',
-    endDate: '12/2020',
+    startDate: '09/2020',
+    endDate: '01/2021',
     content: (
       <div>
         <a href="https://www.thebraghouse.com/">Braghouse</a> is a startup

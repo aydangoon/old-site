@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { EXPERIENCE } from '../data/experience'
 import { ExperienceItem } from './experience_item'
+import { DownloadIcon } from '../svgs'
 
 export const Home = () => {
   return (
@@ -23,9 +24,12 @@ export const Home = () => {
             />*/}
             <div>
               <h1>Aydan Gooneratne</h1>
-              <h5>Junior at UPenn studying CIS</h5>
+              <h5>Junior @ UPenn studying CIS</h5>
               <small>
-                <i>aydang@seas.upenn.edu</i>
+                aydang@seas.upenn.edu | 484-410-1856 | <DownloadIcon />{' '}
+                <a href="/files/resume.pdf" download>
+                  resume
+                </a>
               </small>
             </div>
           </div>
